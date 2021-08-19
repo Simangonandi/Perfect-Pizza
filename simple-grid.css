@@ -17,7 +17,9 @@ body {
   top: 0;
   font-size: 100%;
   background-color: hotpink;
+  display: inline;
 }
+
 
 /* ROOT FONT STYLES */
 
