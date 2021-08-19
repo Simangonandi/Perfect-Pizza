@@ -68,7 +68,7 @@ function payment() {
     var paymentAmt = Number(payAmt.value);
     if (paymentAmt == cartbill.priceUpdate().totalCart) {
         containerBox.style.backgroundColor = 'rgba(120, 255, 120, 0.95)';
-        message.innerHTML = "Enjoy your Pizza!";
+        message.innerHTML = "Done, Enjoy your Pizza!";
         cartbill.resetCart();
 
         smallPizzaQty.innerHTML = cartbill.resetCart().smallQty;
@@ -89,7 +89,7 @@ function payment() {
 
     } else if (paymentAmt > cartbill.priceUpdate().totalCart) {
         containerBox.style.backgroundColor = 'rgba(120, 255, 120, 0.95)';
-        message.innerHTML = "Enjoy your Pizza, here is your change R" + cartbill.change(paymentAmt);
+        message.innerHTML = "Successful, Enjoy your Pizza, here is your change R" + cartbill.change(paymentAmt);
         cartbill.resetCart();
 
         smallPizzaQty.innerHTML = cartbill.resetCart().smallQty;
@@ -110,7 +110,7 @@ function payment() {
 
     } else {
         containerBox.style.backgroundColor = 'rgba(255, 120, 120, 0.95)';
-        message.innerHTML = "Sorry, that is not enough money!";
+        message.innerHTML = "Sorry, you don't have enough money!";
         setTimeout(function () {
             containerBox.classList.add('hidden');
         }, 4500);
